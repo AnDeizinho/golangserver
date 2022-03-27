@@ -1,0 +1,18 @@
+{{define "titulo"}}Posts{{end}}
+
+{{define "cabecalho"}}
+    Posts
+{{end}}
+
+{{define "corpo"}}
+    {{range $k , $v := .Posts}}
+        <p>{{$v}}</p>
+        <a href="/edit/{{$k}}">Editar</a>
+        <a href="/delete/{{$k}}">Deletar</a>
+    {{end}}
+    <form action="/salvar" method="post">
+        <textarea rows="4" cols="50" name="postagem"></textarea><br>
+        <input type="submit" value="postar">
+    </form>
+    <a href="/">home</a>
+{{end}}

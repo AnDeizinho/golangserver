@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    {{define "base"}}
+        <head>
+            <title>{{template  "titulo" .}}</title>
+            <meta charset="utf-8">
+            <style>
+                h1{
+                    color: red;
+                }
+            </style>
+        </head>
+        <body><h1>{{template  "cabecalho" .}}</h1>
+            <div>
+                {{template "corpo" .}}
+            </div>
+        </body>
+    {{end}}
+</html>

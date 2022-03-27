@@ -1,0 +1,10 @@
+{{define "titulo"}}Editar{{end}}
+{{define "cabecalho"}} Editar{{end}}
+{{define "corpo"}}
+    <form action="/atualiza/{{.Id}}" method="post">
+        <textarea name="postagem" cols="50" rows="10">
+            {{.Post}}
+        </textarea>
+        <input type="submit" value="salvar">
+    </form>
+{{end}}
